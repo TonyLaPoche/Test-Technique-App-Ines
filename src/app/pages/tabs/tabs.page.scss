@@ -1,0 +1,15 @@
+ion-tab-button {
+  --color-selected: #DBE6E9;
+  --color: #528791;
+  padding-top: 10px !important;
+}
+
+ion-tab-button.tab-selected {
+  border-top: 2px solid #DBE6E9;
+}
+
+ion-tab-bar {
+  padding-bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  --background: #132D32;
+}
+
