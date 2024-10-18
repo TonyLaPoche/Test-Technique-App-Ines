@@ -33,15 +33,15 @@ Vous travaillerez sur une application sur le thème de Harry Potter, compatible 
 
 ### 2. Création d'une nouvelle route et d'un composant
 
-- **Description :** À partir du mockup fourni, complétez la page existante **Wizards** en ajoutant une nouvelle page qui affichera les détails d'un sorcier (wizard).
-- **Mockup :** [Lien vers le mockup](https://www.figma.com/design/Crzdw2uNkgUuufkfHS6CLI/Test-technique---Recrutement-tech?node-id=0-1&t=EITm01wabJ1Yi3Y2-1).
+- **Description :** À partir des maquettes fournies, complétez la page existante **Wizards** en ajoutant une nouvelle page qui affichera les détails d'un sorcier (wizard).
+- **Maquettes :** [Lien vers les maquettes](https://www.figma.com/design/Crzdw2uNkgUuufkfHS6CLI/Test-technique---Recrutement-tech?node-id=0-1&t=EITm01wabJ1Yi3Y2-1).
 
 - **Objectifs :**
-  - Implémenter le composant et la mise en page selon les spécifications du mockup.
+  - Implémenter le composant et la mise en page selon les spécifications des maquettes.
   - Assurer que la page soit **responsive** et compatible avec les formats mobile et tablette.
 
 - **Critères de réussite :**
-  - La mise en page doit respecter fidèlement le mockup fourni.
+  - La mise en page doit respecter fidèlement les maquettes fournies.
   - La barre de recherche doit être fonctionnelle.
   - Utilisation correcte de TailwindCSS pour la gestion des styles.
   - Navigation fluide vers la nouvelle route.
@@ -64,7 +64,7 @@ Vous travaillerez sur une application sur le thème de Harry Potter, compatible 
 - Qualité du code (lisibilité, modularité).
 - Respect des consignes.
 - Fonctionnalités opérationnelles sans bugs.
-- Design responsive fidèle aux standards du mockup.
+- Design responsive fidèle aux standards des maquetttes.
 - Intégration propre et efficace de l'API.
 - Utilisation des concepts modernes d'Angular.
 
