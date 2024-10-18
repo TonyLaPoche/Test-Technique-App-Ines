@@ -10,6 +10,8 @@ This project requires the following to be installed on your machine:
 
 - Node.js (recommended LTS version)
 - npm (installed with Node.js)
+- Ionic CLI
+
 
 Optional :
 - Xcode (See [Capacitor Environment Setup](https://capacitorjs.com/docs/getting-started/environment-setup))
@@ -20,6 +22,12 @@ You can check if you already have Node.js and npm installed by running:
 ```
 node -v
 npm -v
+```
+
+To install Ionic CLI:
+
+```
+npm install -g @ionic/cli
 ```
 
 ## Installation
