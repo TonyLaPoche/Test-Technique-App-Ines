@@ -1,2 +1,7 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+html {
+  --ion-dynamic-font: "Montserrat", sans-serif !important;
+  --ion-font-family: "Montserrat", sans-serif !important;
+}

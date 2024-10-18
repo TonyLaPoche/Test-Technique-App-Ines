@@ -4,12 +4,15 @@ ion-tab-button {
   padding-top: 10px !important;
 }
 
-ion-tab-button.tab-selected {
-  border-top: 2px solid #DBE6E9;
-}
-
 ion-tab-bar {
   padding-bottom: max(16px, env(safe-area-inset-bottom)) !important;
   --background: #132D32;
+}
+
+ion-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
 }
 

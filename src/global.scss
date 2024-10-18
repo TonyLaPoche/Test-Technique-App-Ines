@@ -55,6 +55,13 @@ ion-title.title-large {
   font-size: 30px;
 }
 
+@media (min-width: 640px) {
+  ion-title.title-large {
+    font-size: 36px;
+    padding: 0 32px;
+  }
+}
+
 ion-toolbar {
   --background: #132D32
 }

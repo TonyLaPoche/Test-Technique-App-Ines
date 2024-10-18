@@ -2,7 +2,7 @@
   display: block;
 }
 
-// TODO : replace card class with tailwind classes
+// TODO : replace card & descriptions classes with tailwind classes
 .card {
   background-color: #004755;
   color: #DBE6E9;
@@ -18,7 +18,20 @@
   .description {
     color: #53A7BC;
     font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 4px;
   }
+
+  @media (min-width: 640px) {
+    font-size: 20px;
+
+    .description {
+      font-size: 20px;
+      padding-top: 8px;
+      font-weight: 500;
+    }
+  }
+
 }
 
 .card:hover {
