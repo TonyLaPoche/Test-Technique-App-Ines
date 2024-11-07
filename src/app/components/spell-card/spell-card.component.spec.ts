@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { SpellCardComponent } from './spell-card.component';
+import {SpellCardComponent} from './spell-card.component';
 
 describe('SpellCardComponent', () => {
     let component: SpellCardComponent;
@@ -12,10 +12,11 @@ describe('SpellCardComponent', () => {
             imports: [SpellCardComponent, IonicModule.forRoot()]
         }).compileComponents();
 
-    fixture = TestBed.createComponent(SpellCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+        fixture = TestBed.createComponent(SpellCardComponent);
+        fixture.componentRef.setInput('spell', {id: '1', name: 'Faker', description: 'Faker description'});
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    }));
 
     it('should create', () => {
         expect(component).toBeTruthy();
