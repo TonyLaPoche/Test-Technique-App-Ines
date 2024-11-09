@@ -25,6 +25,8 @@ Ce test technique consiste en deux grandes étapes:
 1. **Correction et refactorisation** d’un code existant dans l’application.
 2. **Création d’une nouvelle page** et d’un composant, basée sur une maquette fournie.
 
+L'ensemble de consignes est dans ce [fichier](./CONSIGNES.md)
+
 ## Fonctionnalités
 
 - **Liste des sortilèges** : Affiche et filtre les sorts magiques de l’univers Harry Potter.
@@ -102,7 +104,8 @@ ng test --no-watch --code-coverage
 
 ## WakaTime
 
-Temps "frappe clavier" passé sur le projet :
+Projet réceptionné le **mercredi 3 novembre 2024** et démarrer le **jeudi 4 novembre 2024**.  
+Temps "frappe clavier" passé sur le projet  déterminer par [Wakatime](https://wakatime.com/):
 
 [![wakatime](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966.svg)](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966)
 
