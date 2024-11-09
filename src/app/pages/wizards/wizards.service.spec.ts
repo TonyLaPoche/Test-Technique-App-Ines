@@ -81,7 +81,7 @@ describe('WizardsService', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should fetch wizard list', () => {
+    it('should fetch wizards list', () => {
         service.getCharacters().subscribe((data) => {
             expect(data).toEqual(mockWizards)
         })
