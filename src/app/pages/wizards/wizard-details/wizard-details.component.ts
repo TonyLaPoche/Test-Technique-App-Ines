@@ -1,4 +1,4 @@
-import {Component, inject, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, input} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {JoinPipe} from "../../../shared/pipes/join.pipe";
 import {WizardDetailsService} from "./wizard-details.service";
@@ -26,7 +26,8 @@ import {addIcons} from "ionicons";
         IonChip,
         IonContent,
         TitleCasePipe
-    ]
+    ],
+    changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class WizardDetailsComponent {
     wizardDetailsService = inject(WizardDetailsService);

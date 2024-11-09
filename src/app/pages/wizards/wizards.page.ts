@@ -1,4 +1,4 @@
-import {Component, computed, inject, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonContent, IonHeader, IonSearchbar, IonTitle, IonToolbar} from '@ionic/angular/standalone';
@@ -12,7 +12,8 @@ import {WizardCardComponent} from "../../components/wizard-card/wizard-card.comp
     templateUrl: './wizards.page.html',
     styleUrls: ['./wizards.page.scss'],
     standalone: true,
-    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonSearchbar, SpellCardComponent, WizardCardComponent]
+    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonSearchbar, SpellCardComponent, WizardCardComponent],
+    changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class WizardsPage {
     wizardsServices = inject(WizardsService);

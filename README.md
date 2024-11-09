@@ -1,89 +1,111 @@
+# App'Ines Test Technique (Angular + Ionic / TypeScript / TailwindCSS)
 
-# App'Ines Technical Test (Angular + Ionic / Typescript / TailwindCSS)
+Ce dépôt contient le projet pour le test technique App'Ines. Il est construit avec **Angular 18** et **Ionic v8+** et
+utilise **TailwindCSS** pour la gestion des styles. Ce projet repose sur un thème **Harry Potter**, avec une interface
+compatible mobile et tablette, et utilise l’API open source [HP-API](https://hp-api.onrender.com/).
 
-This repository is the Ionic project for App'ines technical test.
-It is an Ionic v8+ project, configured with Angular v18+ and TailwindCSS.
+## Sommaire
 
-## Prerequisites
+- [Objectifs du Projet](#objectifs-du-projet)
+- [Fonctionnalités](#fonctionnalités)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Live Reload](#live-reload)
+- [Tests](#tests)
+- [Technologies](#technologies)
+- [Détails Techniques Spécifiques](#détails-techniques-spécifiques)
+- [WakaTime](#wakatime)
+- [Licence](#licence)
 
-This project requires the following to be installed on your machine:
+## Objectifs du Projet
 
-- Node.js (recommended LTS version)
-- npm (installed with Node.js)
-- Ionic CLI
+Ce test technique consiste en deux grandes étapes:
 
+1. **Correction et refactorisation** d’un code existant dans l’application.
+2. **Création d’une nouvelle page** et d’un composant, basée sur une maquette fournie.
 
-Optional :
-- Xcode (See [Capacitor Environment Setup](https://capacitorjs.com/docs/getting-started/environment-setup))
-- Android Studio (See [Capacitor Environment Setup](https://capacitorjs.com/docs/getting-started/environment-setup))
+## Fonctionnalités
 
-You can check if you already have Node.js and npm installed by running:
+- **Liste des sortilèges** : Affiche et filtre les sorts magiques de l’univers Harry Potter.
+- **Page des sorciers** : Explorez les personnages et affichez leurs détails.
+- **Application responsive** : Conception optimisée pour les formats mobile et tablette.
+- **Tests unitaires** : Mis en place pour assurer la robustesse du code.
 
-```
-node -v
-npm -v
-```
+## Prérequis
 
-To install Ionic CLI:
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-```
-npm install -g @ionic/cli
-```
+- **Node.js** (version 16 ou supérieure)
+- **Angular CLI** (version 18)
+- **Ionic CLI**
+- **Capacitor** pour la compatibilité multiplateforme
 
 ## Installation
 
-To set up this project locally, follow these steps:
+Pour les instructions détaillées d'installation, référez-vous au fichier [INSTALL.md](./INSTALL.md).
 
-1. Clone this repository to your local machine:
+## Utilisation
 
-```
-git clone git@bitbucket.org:appinesfr/appines_angular_test.git
-```
+Pour démarrer l’application localement :
 
-2. Navigate to the project folder:
-
-```
-cd appines_angular_test
-```
-
-3. Install the necessary dependencies with npm:
-
-```
-npm install
-```
-
-## Usage
-
-To run the project locally, execute:
-
-```
+```bash
 ionic serve
 ```
 
-To build the project and open it in a simulator or on a device:
+Pour compiler l'application et la tester sur un appareil ou un simulateur :
 
-```
+```bash
 ionic build
 npx cap open ios
 ```
 
-or
+ou
 
-```
+```bash
 npx cap open android
 ```
 
 ## Live Reload
 
-Live Reload is useful for debugging both the web portion of an app as well as native functionality on device hardware or simulators. Rather than deploy a new native binary every time you make a code change, it reloads the browser (or Web View) when changes in the app are detected.
+Le rechargement automatique facilite le débogage de la partie web et des fonctionnalités natives. Assurez-vous que votre
+appareil mobile est sur le même réseau Wi-Fi que votre ordinateur.
 
-If running on a device, make sure it is on the same Wi-Fi network as your computer.
-
-See [Capacitor documentation](https://capacitorjs.com/docs/guides/live-reload)
-
-```
+```bash
 ionic cap run android -l --external
 ionic cap run ios -l --external
 ```
 
-Need Xcode & Android Studio (maybe you need to install [Java JDK](https://www.oracle.com/fr/java/technologies/downloads/#jdk17-mac))
+## Tests
+
+Les tests unitaires sont intégrés pour assurer la fiabilité de l'application. Pour lancer les tests :
+
+```bash
+ng test --no-watch --code-coverage
+```
+
+## Technologies
+
+- **Angular 18** : Framework de développement.
+- **Ionic & Capacitor** : Gestion des fonctionnalités natives pour une application multiplateforme.
+- **TailwindCSS** : Gestion des styles avec configuration personnalisée.
+- **Jasmine** : Outils de tests unitaires.
+
+## Détails Techniques Spécifiques
+
+- **Utilisation de Signals Angular** : Tous les composants sont configurés avec des **Signals** pour optimiser la
+  réactivité.
+- **Syntaxe Control Flow d’Angular** : Utilisation de la nouvelle syntaxe de flux de contrôle d’Angular pour
+  remplacer `*ngFor` et `*ngIf`.
+- **Composants Standalone** : Seuls les composants **standalone** sont utilisés, conformément aux bonnes pratiques
+  Angular modernes.
+
+## WakaTime
+
+Temps "frappe clavier" passé sur le projet :
+
+[![wakatime](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966.svg)](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966)
+
+## Licence
+
+Ce projet appartient à la société App'Ines.  
