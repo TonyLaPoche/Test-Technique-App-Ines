@@ -10,8 +10,6 @@ compatible mobile et tablette, et utilise l’API open source [HP-API](https://h
 - [Fonctionnalités](#fonctionnalités)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Live Reload](#live-reload)
 - [Tests](#tests)
 - [Technologies](#technologies)
 - [Détails Techniques Spécifiques](#détails-techniques-spécifiques)
@@ -46,37 +44,6 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ## Installation
 
 Pour les instructions détaillées d'installation, référez-vous au fichier [INSTALL.md](./INSTALL.md).
-
-## Utilisation
-
-Pour démarrer l’application localement :
-
-```bash
-ionic serve
-```
-
-Pour compiler l'application et la tester sur un appareil ou un simulateur :
-
-```bash
-ionic build
-npx cap open ios
-```
-
-ou
-
-```bash
-npx cap open android
-```
-
-## Live Reload
-
-Le rechargement automatique facilite le débogage de la partie web et des fonctionnalités natives. Assurez-vous que votre
-appareil mobile est sur le même réseau Wi-Fi que votre ordinateur.
-
-```bash
-ionic cap run android -l --external
-ionic cap run ios -l --external
-```
 
 ## Tests
 
