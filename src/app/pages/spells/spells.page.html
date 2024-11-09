@@ -5,29 +5,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Spells</ion-title>
-        </ion-toolbar>
-    </ion-header>
+    <div class="max-w-[834px] mx-auto">
+        <ion-header collapse="condense">
+            <ion-toolbar>
+                <ion-title size="large">Spells</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <div class="m-4 tablet:m-8">
+            <ion-searchbar
+                    [(ngModel)]="searchInput"
+                    [debounce]="300"
+                    class="py-0 custom-searchbar mb-8"
+                    mode="ios"
+                    placeholder="Search">
+            </ion-searchbar>
 
-    <div class="m-4 tablet:m-8">
-        <ion-searchbar
-                [(ngModel)]="searchInput"
-                [debounce]="300"
-                class="py-0 custom-searchbar mb-8"
-                mode="ios"
-                placeholder="Search">
-        </ion-searchbar>
-
-        <div class="space-y-4">
+            <div class="space-y-4">
                 <ng-container>
                     @for (spell of filteredSpells(); track $index) {
                         <app-spell-card [spell]="spell"></app-spell-card>
                     }
                 </ng-container>
-        </div>
+            </div>
 
+        </div>
     </div>
 
 </ion-content>

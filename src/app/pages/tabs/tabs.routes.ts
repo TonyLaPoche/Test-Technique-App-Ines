@@ -7,17 +7,17 @@ export const tabsRoutes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'wizards',
-        loadComponent: () => import('../wizards/wizards.page').then( m => m.WizardsPage)
-      },
-      {
-        path: 'spells',
-        loadComponent: () => import('../spells/spells.page').then( m => m.SpellsPage)
-      },
-      {
         path: '',
         redirectTo: 'wizards',
         pathMatch: 'full',
+      },
+      {
+        path: '',
+        loadChildren: () => import('../wizards/wizards.route')
+      },
+      {
+        path: 'spells',
+        loadComponent: () => import('../spells/spells.page').then(c => c.SpellsPage)
       },
     ],
   },

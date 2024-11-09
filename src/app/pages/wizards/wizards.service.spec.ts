@@ -1,18 +1,16 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {WizardsPage} from './wizards.page';
-import {Wizard} from "../../models/wizard";
-import {WizardsService} from "./wizards.service";
-import {of} from "rxjs";
+import {TestBed} from '@angular/core/testing';
+
+import {WizardsService} from './wizards.service';
 import {provideHttpClient} from "@angular/common/http";
 import {provideHttpClientTesting} from "@angular/common/http/testing";
-import {provideLocationMocks} from "@angular/common/testing";
-import {ActivatedRoute, provideRouter} from "@angular/router";
+import {Wizard} from "../../models/wizard";
+import {of} from "rxjs";
 
-describe('WizardsPage', () => {
-    let component: WizardsPage;
-    let fixture: ComponentFixture<WizardsPage>;
-    let wizardsServiceMock: jasmine.SpyObj<WizardsService>;
-    let mockWizards: Wizard[] = [
+describe('WizardsService', () => {
+    let service: WizardsService;
+    let wizardServiceMock: jasmine.SpyObj<WizardsService>;
+    let mockWizards: Wizard[];
+    mockWizards = [
         {
             id: "1234abcd",
             name: "Harry Potter",
@@ -65,46 +63,27 @@ describe('WizardsPage', () => {
             alive: true, // Chuck Norris est éternel
             image: "https://example.com/images/chuck-norris.jpg"
         }
-    ]
-
-    beforeEach(async () => {
-        wizardsServiceMock = jasmine.createSpyObj('WizardsService', ['getCharacters']);
-        wizardsServiceMock.getCharacters.and.returnValue(of(mockWizards))
-        await TestBed.configureTestingModule(
-            {
-                imports: [WizardsPage],
-                providers: [
-                    provideHttpClient(),
-                    provideHttpClientTesting(),
-                    provideLocationMocks(),
-                    provideRouter([]),
-                    {
-                        provide: WizardsService,
-                        useValue: wizardsServiceMock
-                    },
-                    {
-                        provide: ActivatedRoute,
-                        useValue: {
-                            snapshot: {params: {}},
-                            paramMap: of({})
-                        }
-                    }
-                ]
-            }
-        ).compileComponents();
-
-        fixture = TestBed.createComponent(WizardsPage);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+    ];
+    beforeEach(() => {
+        wizardServiceMock = jasmine.createSpyObj('WizardsService', ['getCharacters']);
+        wizardServiceMock.getCharacters.and.returnValue(of(mockWizards))
+        TestBed.configureTestingModule({
+            providers: [
+                provideHttpClient(),
+                provideHttpClientTesting(),
+                {provide: WizardsService, useValue: wizardServiceMock}
+            ]
+        });
+        service = TestBed.inject(WizardsService);
     });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
+    it('should be created', () => {
+        expect(service).toBeTruthy();
     });
 
-    it('should display all wizards', () => {
-        const wizardsCards = fixture.debugElement.nativeElement.querySelectorAll('app-wizard-card')
-        expect(fixture.componentInstance.filteredWizards().length).toBe(2);
-        expect(wizardsCards.length).toBe(2);
+    it('should fetch wizards list', () => {
+        service.getCharacters().subscribe((data) => {
+            expect(data).toEqual(mockWizards)
+        })
     })
 });

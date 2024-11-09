@@ -1,0 +1,11 @@
+<article [routerLink]="['/wizards', wizard().id]" class="flex items-center p-5 gap-5 bg-bprimary text-fprimary border border-border-primary rounded-lg shadow-md shadow-black/25 font-montserratAlt font-bold text-[16px] leading-[24px] hover:cursor-pointer">
+    <div class="flex-shrink-0">
+        <img [src]="wizard().image" alt="wizard" class="w-16 h-16 rounded-full object-cover">
+    </div>
+    <section>
+        <h3>{{ wizard().name }}</h3>
+        <p class="max-h-[56px] text-fsecondary font-medium pt-1 tablet:text-[20px] tablet:font-medium tablet:pt-2 font-montserrat line-clamp-2">
+            {{ wizard().alternate_names | join }}
+        </p>
+    </section>
+</article>
