@@ -109,6 +109,8 @@ Temps "frappe clavier" passé sur le projet  déterminer par [Wakatime](https://
 
 [![wakatime](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966.svg)](https://wakatime.com/badge/user/9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/project/0133d120-14d7-403b-9439-9512a01ca966)
 
+Statistique complète du projet: [appines_angular_test](https://wakatime.com/@9d5ca4bc-3c1b-4b73-948c-329a6e87bf24/projects/xltvbwlxih?start=2024-11-03&end=2024-11-09)
+
 ## Licence
 
 Ce projet appartient à la société App'Ines.  
