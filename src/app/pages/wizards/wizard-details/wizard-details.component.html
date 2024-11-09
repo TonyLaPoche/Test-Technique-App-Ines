@@ -3,7 +3,7 @@
         @if (wizardDetails$ | async; as wizards) {
             @for (wizard of wizards; track wizard.id) {
                 <article class="relative text-fprimary">
-                    <div class="w-full h-[340px] relative">
+                    <div class="w-full h-[340px] tablet:h-[458px] desktop:h-[768px] relative">
                         <div class="relative w-full h-full">
                         <ion-button size="large" routerLink="/wizards" class="absolute top-10 left-5">
                             <ion-icon slot="icon-only" name="chevron-back-sharp"></ion-icon>
