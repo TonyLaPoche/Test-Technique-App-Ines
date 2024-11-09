@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 import {Spell} from "../../models/spell";
 
 @Component({
@@ -9,7 +9,8 @@ import {Spell} from "../../models/spell";
         display: block;
       }
     `,
-    standalone: true
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpellCardComponent {
     spell = input.required<Spell>();

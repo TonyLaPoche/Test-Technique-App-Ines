@@ -1,4 +1,4 @@
-import { Component, EnvironmentInjector, inject } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EnvironmentInjector, inject} from '@angular/core';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {peopleOutline, flameOutline} from 'ionicons/icons';
@@ -9,6 +9,7 @@ import {peopleOutline, flameOutline} from 'ionicons/icons';
   styleUrls: ['tabs.page.scss'],
   standalone: true,
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
