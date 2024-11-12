@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 import {Wizard} from "../../models/wizard";
-import {JoinPipe} from "../../shared/pipes/join.pipe";
+import {JoinAndFormatPipe} from "../../shared/pipes/joinAndFormat.pipe";
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -14,7 +14,7 @@ import {RouterLink} from "@angular/router";
     standalone: true,
     imports: [
         RouterLink,
-        JoinPipe,
+        JoinAndFormatPipe,
     ],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
