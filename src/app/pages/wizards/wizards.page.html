@@ -23,7 +23,14 @@
             <div class="space-y-4">
                 <ng-container>
                     @for (wizard of filteredWizards(); track $index) {
-                        <app-wizard-card [wizard]="wizard"></app-wizard-card>
+                        @defer (on viewport) {
+                            <app-wizard-card [wizard]="wizard"></app-wizard-card>
+                        } @placeholder {
+                            <ion-item>
+                                <ion-spinner slot="start" color="primary" name="dots"></ion-spinner>
+                                <ion-label color="primary">Loading...</ion-label>
+                            </ion-item>
+                        }
                     }
                 </ng-container>
             </div>
