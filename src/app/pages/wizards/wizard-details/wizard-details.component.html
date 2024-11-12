@@ -12,49 +12,49 @@
                         </div>
                         <div class="absolute h-16 w-full bottom-0 bg-gradient-overlay"></div>
                     </div>
-                    <div class="p-4 flex flex-col gap-6">
-                        <section class="flex flex-col gap-2">
-                            <h2 class="text-3xl font-medium font-montserratAlt">
+                    <div class="p-4 flex flex-col gap-8">
+                        <section class="flex flex-col gap-5 text-white">
+                            <h2 class="text-3xl font-bold font-montserratAlt">
                                 {{ wizard.name | titlecase }}
                             </h2>
-                            <p class="font-normal font-montserrat tracking-tight">
+                            <p class="font-normal text-lg font-montserrat tracking-tight">
                                 {{ wizard.alternate_names | joinAndFormat }}
                             </p>
                             <ul class="flex gap-2">
                                 <li>
-                                    <ion-chip class="bg-chip-species"> {{ wizard.species | titlecase }}</ion-chip>
+                                    <ion-chip class="bg-chip-species rounded-full font-medium tracking-tight text-lg"> {{ wizard.species | titlecase }}</ion-chip>
                                 </li>
                                 <li>
-                                    <ion-chip class="bg-chip-wizard"> {{ isWizard(wizard.wizard) | titlecase }}
+                                    <ion-chip class="bg-chip-wizard rounded-full font-medium tracking-tight text-lg"> {{ isWizard(wizard.wizard) | titlecase }}
                                     </ion-chip>
                                 </li>
                                 <li>
-                                    <ion-chip class="bg-chip-house"> {{ wizard.house  | titlecase }}</ion-chip>
+                                    <ion-chip class="bg-chip-house rounded-full font-medium tracking-tight text-lg"> {{ wizard.house  | titlecase }}</ion-chip>
                                 </li>
                             </ul>
                         </section>
-                        <section class="flex flex-col border border-solid border-[#3E808F] rounded-lg p-4 bg-[#064754]">
-                            <div class="flex items-center justify-between pb-2 border-b border-border-primary/50">
+                        <section class="flex flex-col border border-solid border-[#3E808F] rounded-lg p-6 bg-[#064754] text-lg font-medium">
+                            <div class="flex items-center justify-between pb-6 border-b border-border-primary/50">
                                 <p class="text-fsecondary">Genre</p>
                                 <p>{{ wizard.gender | titlecase }}</p>
                             </div>
-                            <div class="flex items-center justify-between py-2 border-b border-border-primary/50">
+                            <div class="flex items-center justify-between py-6 border-b border-border-primary/50">
                                 <p class="text-fsecondary">Birth</p>
                                 <p>{{ (wizard.dateOfBirth.split('-').reverse().join('-') + 'T00:00:00') | date : 'MMMM dd YYYY' }}</p>
                             </div>
-                            <div class="flex items-center justify-between py-2 border-b border-border-primary/50">
+                            <div class="flex items-center justify-between py-6 border-b border-border-primary/50">
                                 <p class="text-fsecondary">Ancestry</p>
                                 <p>{{ wizard.ancestry | titlecase }}</p>
                             </div>
-                            <div class="flex items-center justify-between py-2 border-b border-border-primary/50">
+                            <div class="flex items-center justify-between py-6 border-b border-border-primary/50">
                                 <p class="text-fsecondary">Eye colour</p>
                                 <p>{{ wizard.eyeColour | titlecase }}</p>
                             </div>
-                            <div class="flex items-center justify-between py-2 border-b border-border-primary/50">
+                            <div class="flex items-center justify-between py-6 border-b border-border-primary/50">
                                 <p class="text-fsecondary">Hair colour</p>
                                 <p>{{ wizard.hairColour | titlecase }}</p>
                             </div>
-                            <div class="flex items-center justify-between pt-2">
+                            <div class="flex items-center justify-between pt-6">
                                 <p class="text-fsecondary">Patronus</p>
                                 <p>{{ wizard.patronus | titlecase }}</p>
                             </div>

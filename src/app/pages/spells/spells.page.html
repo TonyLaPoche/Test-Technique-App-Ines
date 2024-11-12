@@ -23,7 +23,14 @@
             <div class="space-y-4">
                 <ng-container>
                     @for (spell of filteredSpells(); track $index) {
-                        <app-spell-card [spell]="spell"></app-spell-card>
+                        @defer (on viewport) {
+                            <app-spell-card [spell]="spell"></app-spell-card>
+                        } @placeholder {
+                            <ion-item>
+                                <ion-spinner slot="start" color="primary" name="dots"></ion-spinner>
+                                <ion-label color="primary">Loading...</ion-label>
+                            </ion-item>
+                        }
                     }
                 </ng-container>
             </div>

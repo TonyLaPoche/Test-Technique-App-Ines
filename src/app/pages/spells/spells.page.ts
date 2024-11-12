@@ -1,7 +1,16 @@
 import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {IonContent, IonHeader, IonSearchbar, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {
+    IonContent,
+    IonHeader,
+    IonItem,
+    IonLabel,
+    IonSearchbar,
+    IonSpinner,
+    IonTitle,
+    IonToolbar
+} from '@ionic/angular/standalone';
 import {SpellCardComponent} from "../../components/spell-card/spell-card.component";
 import {SpellsService} from "./spells.service";
 import {toSignal} from "@angular/core/rxjs-interop";
@@ -11,8 +20,8 @@ import {toSignal} from "@angular/core/rxjs-interop";
     templateUrl: './spells.page.html',
     styleUrls: ['./spells.page.scss'],
     standalone: true,
-    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SpellCardComponent, IonSearchbar],
-    changeDetection:ChangeDetectionStrategy.OnPush,
+    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SpellCardComponent, IonSearchbar, IonItem, IonLabel, IonSpinner],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpellsPage {
     spellsService = inject(SpellsService);

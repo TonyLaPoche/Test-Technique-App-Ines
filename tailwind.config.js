@@ -14,6 +14,7 @@ module.exports = {
             'chip-house':'#53A7BC',
             'gradient-start': '#1B1B27',
             'gradient-end': '#132D32',
+            'white': '#FFFFFF'
         },
         extend: {
             backgroundImage: {
