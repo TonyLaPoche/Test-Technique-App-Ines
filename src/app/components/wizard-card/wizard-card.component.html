@@ -5,7 +5,7 @@
     <section>
         <h3>{{ wizard().name }}</h3>
         <p class="max-h-[56px] text-fsecondary font-medium pt-1 tablet:text-[20px] tablet:font-medium tablet:pt-2 font-montserrat line-clamp-2">
-            {{ wizard().alternate_names | join }}
+            {{ wizard().alternate_names | joinAndFormat }}
         </p>
     </section>
 </article>

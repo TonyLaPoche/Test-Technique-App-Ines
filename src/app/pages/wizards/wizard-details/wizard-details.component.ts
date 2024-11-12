@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, inject, input} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {JoinPipe} from "../../../shared/pipes/join.pipe";
+import {JoinAndFormatPipe} from "../../../shared/pipes/joinAndFormat.pipe";
 import {WizardDetailsService} from "./wizard-details.service";
 import {AsyncPipe, DatePipe, JsonPipe, NgOptimizedImage, TitleCasePipe} from "@angular/common";
 import {toObservable} from "@angular/core/rxjs-interop";
@@ -16,7 +16,7 @@ import {addIcons} from "ionicons";
     standalone: true,
     imports: [
         RouterLink,
-        JoinPipe,
+        JoinAndFormatPipe,
         JsonPipe,
         AsyncPipe,
         NgOptimizedImage,
