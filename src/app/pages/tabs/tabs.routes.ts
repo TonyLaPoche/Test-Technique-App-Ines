@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import wizardsRoutes from "../wizards/wizards.route";
+import spellsRoutes from "../spells/spells.route";
 
 export const tabsRoutes: Routes = [
   {
@@ -11,14 +13,8 @@ export const tabsRoutes: Routes = [
         redirectTo: 'wizards',
         pathMatch: 'full',
       },
-      {
-        path: '',
-        loadChildren: () => import('../wizards/wizards.route')
-      },
-      {
-        path: 'spells',
-        loadComponent: () => import('../spells/spells.page').then(c => c.SpellsPage)
-      },
+        ...wizardsRoutes,
+        ...spellsRoutes,
     ],
   },
 ];
