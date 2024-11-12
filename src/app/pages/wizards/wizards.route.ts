@@ -1,6 +1,6 @@
 import {Routes} from "@angular/router";
 
-const routes: Routes = [
+const wizardsRoutes: Routes = [
     {
         path: 'wizards',
         children: [
@@ -17,4 +17,4 @@ const routes: Routes = [
     }
 ];
 
-export default routes;
+export default wizardsRoutes;
